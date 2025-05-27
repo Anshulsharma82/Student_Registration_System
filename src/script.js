@@ -21,7 +21,6 @@ displayStudents(students)
 
 //Add scroll bar dynamically
 if(tableContainer.scrollHeight > tableContainer.clientHeight) {
-        console.log('yes')
         tableContainer.style.overflowY = 'auto';
     }
 
@@ -41,7 +40,7 @@ form[0].addEventListener('submit', function (e) {
     if (studentName.value) {
         for (let i = 0; i < studentName.value.length; i++) {
             const Ascii_code = studentName.value.charCodeAt(i)
-            console.log('Ascii_code::::::::::::::::::::::::::::', Ascii_code)
+            //Ascii_code of alphabets lie between 65 to 90 and 97 to 122 and Ascii code of space is 32, if user enter any thing other alphabets in that case display error message.
             if (!(Ascii_code >= 65 && Ascii_code <= 90) && !(Ascii_code >= 97 && Ascii_code <= 122) && !(Ascii_code === 32)) {
                 displayMessage('Name should contain alphabets only', true, 5000)
                 return;
@@ -76,7 +75,6 @@ form[0].addEventListener('submit', function (e) {
 
     // Edit record code
     if (isEditing) {
-        console.log('editing')
         //update that record only where id matches, rest return as it is.
         students = students.map((student) => {
             if (parseInt(student.id) === parseInt(id.value)) {
@@ -194,7 +192,6 @@ function validateEmail(email) {
 
 function validateNumber(num) {
     const pattern = /^\d+$/
-    console.log(pattern.test(num))
     return pattern.test(num)
 }
 
