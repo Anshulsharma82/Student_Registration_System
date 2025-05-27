@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A student registration system that allows students to enter and manage details like name, class, address, and contact number, with options to edit and delete records..">
+    <meta name="author" content="Anshul Sharma">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="./CSS//style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body class="box-border m-0 p-0 bg-gradient-to-r from-white to-gray-300 pt-[70px]">
+    <nav class="border-2 border-white p-1 flex justify-between items-center h-[70px] fixed top-0 left-0 w-full bg-gray-300">
+        <img src="./Images/logo.jpg" class="sm:mx-18 h-[50px] w-[100px] rounded-[20%]" alt="Logo">
+        <ul class="sm:mx-18">
+            <li class="bg-red-500 hover:bg-red-700 p-2 px-4  rounded-[8px] text-white font-semibold">
+                <a href="#display">Records</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="mainContainer" class=" border-2 my-18 w-full md:w-auto mx-0 md:mx-18 flex justify-center md:justify-between items-center rounded-[10px] flex-col lg:flex-row">
+        <div class="transition-all duration-4000 hover:rotate-180 bg-[url('./Images/college.jpg')] bg-cover w-[70%] lg:w-[50%] mx-5 my-4 flex justify-center items-center flex-col h-[380px]">
+            <p class="text-orange-500 text-5xl mb-6 font-bold">Student</p>
+            <p class="text-white text-5xl mb-6 font-bold">Registration</p>
+            <p class="text-green-400 text-5xl mb-6 font-bold">System</p>
+        </div>
+        <div id="formDiv" class="w-[70%] lg:w-[50%] my-8 mx-5">
+            <form class="border-2 border-green-700 grid grid-cols-4 p-4 rounded-[10px] m-2 md:m-0">
+                <label for="name" class="col-span-4 lg:col-span-1 text-xl font-semibold lg:mt-6 lg:mb-6 tracking-tight">Student Name
+                </label>
+                <input id="name"
+                    class="col-span-4 lg:col-span-3 mr-2 ml-4 p-1 rounded-[10px] border-2 outline-none mt-2 mb-2 lg:mt-6 lg:mb-6 px-4"
+                    type="text" autocomplete="off">
+                <label for="id" class="col-span-4 lg:col-span-1 text-xl font-semibold mb-2 lg:mb-6">Student ID</label>
+                <input id="id"
+                    class="col-span-4 lg:col-span-3 mr-2 ml-4 p-1 rounded-[10px] border-2 outline-none mb-2 lg:mb-6 px-4"
+                    type="text" autocomplete="off">
+                <label for="email" class="col-span-4 lg:col-span-1 text-xl font-semibold mb-2 lg:mb-6">Email</label>
+                <input id="email"
+                    class="col-span-4 lg:col-span-3 mr-2 ml-4 p-1 rounded-[10px] border-2 outline-none mb-2 lg:mb-6 px-4"
+                    type="text" autocomplete="off">
+                <label for="phone" class="col-span-4 lg:col-span-1 text-xl font-semibold mb-2 lg:mb-6">Phone No.</label>
+                <input id="phone"
+                    class="col-span-4 lg:col-span-3 mr-2 ml-4 p-1 rounded-[10px] border-2 outline-none mb-6 lg:mb-12 px-4"
+                    type="text" autocomplete="off">
+                <input
+                    class="text-white col-span-2 md:col-span-1  border-2 rounded-[6px] py-1 bg-green-500 mb-6 hover:bg-green-700 cursor-pointer"
+                    type="submit" value="ADD" id="addRecord">  
+            </form>
+        </div>
+    </div>
+    <main class="border-2 my-24 mx-0 md:mx-18 rounded-[10px] flex justify-center items-center" id="display">
+        <div class="overflow-x-auto w-full my-4 mx-1 max-h-[300px] overflow-y-hidden" id="tableContainer">
+
+            <table class="md:w-[80%] m-auto border-collapse">
+                <thead class="sticky top-0">
+                    <tr class="">
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Class</th>
+                        <th>Roll No.</th>
+                        <th>Data Manipulation</th>
+                    </tr>
+                </thead>
+                <tbody class=""></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

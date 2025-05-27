@@ -1,0 +1,29 @@
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+@media  screen and (max-width: 600px) {
+    td,th {
+        padding: 2px;
+    }
+}
+
+td {
+    color: white;
+}
+th {
+    color: rgb(1, 121, 1);
+}
+
+thead tr{
+    background-color: rgb(167, 109, 2);;
+}
+
+tbody tr {
+    background-color: rgb(167, 109, 2);;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(199, 137, 21);
+}
